@@ -1,0 +1,140 @@
+﻿<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ROBOFUTURE — 3D Robotlar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="bg"></div>
+
+  <header class="topbar">
+    <div class="brand">ROBOFUTURE</div>
+    <nav class="nav">
+      <a href="#robots">Robotlar</a>
+      <a href="#future">Robo Kelajak</a>
+      <a href="#login">Login</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">3D • Three.js • Optimized</p>
+        <h1>Robotlar bilan kelajakni ko‘ring.</h1>
+        <p class="lead">Minimal ranglar, maksimal aniqlik. Har bir robot — funksional dizayn, energiya samaradorligi va xavfsizlik falsafasi.</p>
+        <div class="cta">
+          <a class="btn" href="#robots">Robotlarni ko‘rish</a>
+          <button class="btn ghost" id="openLogin">Login</button>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="stat">24/7</div>
+          <div class="muted">Barqaror ishlash</div>
+        </div>
+        <div>
+          <div class="stat">3D</div>
+          <div class="muted">Yengil geometriya</div>
+        </div>
+        <div>
+          <div class="stat">SHA-256</div>
+          <div class="muted">Shifrlangan login</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="robots" class="section">
+      <h2>Robotlar galereyasi</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Atlas‑Lite</h3>
+          <p>Yengil korpus, yuqori manevr. Logistika va tezkor yetkazib berish uchun.</p>
+          <div class="chip">Energiya: 98%</div>
+        </article>
+        <article class="card">
+          <h3>Guardian‑S</h3>
+          <p>Sensorlar to‘plami va xavfsizlik algoritmlari bilan ishlab chiqarish liniyalari uchun.</p>
+          <div class="chip">Himoya: Max</div>
+        </article>
+        <article class="card">
+          <h3>Nova‑Care</h3>
+          <p>Inson bilan hamkor ishlashga mos. Sog‘liqni nazorat qilish va yordamchi vazifalar.</p>
+          <div class="chip">Muomala: Yumshoq</div>
+        </article>
+      </div>
+    </section>
+
+    <section id="future" class="section">
+      <h2>Robo kelajak</h2>
+      <div class="future">
+        <p>
+          Kelajak robotlari — faqat kuch emas, balki mas’uliyatli algoritmlar. Ular energiyani tejaydi, xatoliklarni oldindan
+          aniqlaydi va inson bilan birgalikda qaror qabul qiladi. Shu sababli dizayn ham minimal, signal ham aniq.
+        </p>
+        <ul class="bullets">
+          <li>Sun’iy intellekt + etik nazorat</li>
+          <li>Modulli ehtiyot qismlar</li>
+          <li>Signalni shifrlash va xavfsiz aloqa</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="login" class="section">
+      <h2>Login</h2>
+      <div class="login-panel">
+        <form id="loginForm" autocomplete="off">
+          <label>
+            Email
+            <input type="email" name="email" required placeholder="robot@future.ai" />
+          </label>
+          <label>
+            Parol
+            <input type="password" name="password" required minlength="8" placeholder="••••••••" />
+          </label>
+          <button class="btn" type="submit">Shifrlab yuborish</button>
+          <p class="muted" id="hashOut">Hash: —</p>
+        </form>
+        <div class="note">
+          Bu demo. Parol serverga yuborilishidan oldin SHA‑256 bilan shifrlanadi.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>ROBOFUTURE © 2026</span>
+    <span>Minimal colors, maksimal stabilitet</span>
+  </footer>
+
+  <div class="login-modal" id="loginModal" aria-hidden="true">
+    <div class="login-card">
+      <div class="login-header">
+        <div class="brand">ROBOFUTURE</div>
+        <button class="icon-btn" id="closeLogin" aria-label="Close">✕</button>
+      </div>
+      <form id="loginFormModal" autocomplete="off">
+        <label>
+          Email
+          <input type="email" name="email" required placeholder="robot@future.ai" />
+        </label>
+        <label>
+          Parol
+          <input type="password" name="password" required minlength="8" placeholder="••••••••" />
+        </label>
+        <button class="btn" type="submit">Shifrlab yuborish</button>
+        <p class="muted" id="hashOutModal">Hash: —</p>
+      </form>
+      <div class="note">
+        Demo rejim. Server yo‘q, faqat shifrlash ko‘rsatiladi.
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
